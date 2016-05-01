@@ -1,0 +1,238 @@
+SampleName="Naxi"
+SampleSize=1
+SampleData= {
+   1   0.0
+   2   0.0
+   3   1.0
+   4   0.0
+   5   0.0
+   6   0.0
+   7   0.0
+   8   0.0
+   9   0.0
+   10   0.0
+}
+SampleName="Hui"
+SampleSize=13
+SampleData= {
+   1   0.461592318464
+   2   0.0769153830766
+   3   0.0769153830766
+   4   0.153830766153
+   5   0.23074614923
+   6   0.0
+   7   0.0
+   8   0.0
+   9   0.0
+   10   0.0
+}
+SampleName="Dong"
+SampleSize=1
+SampleData= {
+   1   1.0
+   2   0.0
+   3   0.0
+   4   0.0
+   5   0.0
+   6   0.0
+   7   0.0
+   8   0.0
+   9   0.0
+   10   0.0
+}
+SampleName="Han"
+SampleSize=481
+SampleData= {
+   1   0.775710284114
+   2   0.0686274509804
+   3   0.0748299319728
+   4   0.0395158063225
+   5   0.0145058023209
+   6   0.0145058023209
+   7   0.0062024809924
+   8   0.00410164065626
+   9   0.00200080032013
+   10   0.0
+}
+SampleName="Tujia"
+SampleSize=2
+SampleData= {
+   1   1.0
+   2   0.0
+   3   0.0
+   4   0.0
+   5   0.0
+   6   0.0
+   7   0.0
+   8   0.0
+   9   0.0
+   10   0.0
+}
+SampleName="Yugur"
+SampleSize=1
+SampleData= {
+   1   0.0
+   2   0.0
+   3   0.0
+   4   1.0
+   5   0.0
+   6   0.0
+   7   0.0
+   8   0.0
+   9   0.0
+   10   0.0
+}
+SampleName="Li"
+SampleSize=2
+SampleData= {
+   1   1.0
+   2   0.0
+   3   0.0
+   4   0.0
+   5   0.0
+   6   0.0
+   7   0.0
+   8   0.0
+   9   0.0
+   10   0.0
+}
+SampleName="Miao"
+SampleSize=1
+SampleData= {
+   1   1.0
+   2   0.0
+   3   0.0
+   4   0.0
+   5   0.0
+   6   0.0
+   7   0.0
+   8   0.0
+   9   0.0
+   10   0.0
+}
+SampleName="Lingao"
+SampleSize=1
+SampleData= {
+   1   1.0
+   2   0.0
+   3   0.0
+   4   0.0
+   5   0.0
+   6   0.0
+   7   0.0
+   8   0.0
+   9   0.0
+   10   0.0
+}
+SampleName="Uygur"
+SampleSize=2
+SampleData= {
+   1   0.0
+   2   0.0
+   3   0.0
+   4   0.0
+   5   0.5
+   6   0.0
+   7   0.0
+   8   0.0
+   9   0.0
+   10   0.5
+}
+SampleName="Dai"
+SampleSize=1
+SampleData= {
+   1   1.0
+   2   0.0
+   3   0.0
+   4   0.0
+   5   0.0
+   6   0.0
+   7   0.0
+   8   0.0
+   9   0.0
+   10   0.0
+}
+SampleName="Yao"
+SampleSize=1
+SampleData= {
+   1   1.0
+   2   0.0
+   3   0.0
+   4   0.0
+   5   0.0
+   6   0.0
+   7   0.0
+   8   0.0
+   9   0.0
+   10   0.0
+}
+SampleName="NorthKorea"
+SampleSize=2
+SampleData= {
+   1   0.5
+   2   0.0
+   3   0.0
+   4   0.5
+   5   0.0
+   6   0.0
+   7   0.0
+   8   0.0
+   9   0.0
+   10   0.0
+}
+SampleName="Man"
+SampleSize=14
+SampleData= {
+   1   0.428542854285
+   2   0.571457145715
+   3   0.0
+   4   0.0
+   5   0.0
+   6   0.0
+   7   0.0
+   8   0.0
+   9   0.0
+   10   0.0
+}
+SampleName="Bai"
+SampleSize=2
+SampleData= {
+   1   0.5
+   2   0.5
+   3   0.0
+   4   0.0
+   5   0.0
+   6   0.0
+   7   0.0
+   8   0.0
+   9   0.0
+   10   0.0
+}
+SampleName="Tong"
+SampleSize=4
+SampleData= {
+   1   0.75
+   2   0.0
+   3   0.0
+   4   0.0
+   5   0.0
+   6   0.25
+   7   0.0
+   8   0.0
+   9   0.0
+   10   0.0
+}
+SampleName="Mongolia"
+SampleSize=9
+SampleData= {
+   1   0.666666666667
+   2   0.222222222222
+   3   0.111111111111
+   4   0.0
+   5   0.0
+   6   0.0
+   7   0.0
+   8   0.0
+   9   0.0
+   10   0.0
+}
