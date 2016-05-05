@@ -61,7 +61,7 @@ class CaculateDateAndSave(object):
         self.lon_haplogroup_dict = defaultdict(lambda: defaultdict(int))
         self.province_dict = defaultdict(lambda: defaultdict(int))
         self.ouput_filename = output_filename
-        self.ethnic_dict = defaultdict(lambda: defaultdict(int))
+        self.ethnic_dict = defaultdict(lambda: defaultdict(lambda :defaultdict(int)))
         self.normalization_province_dict = defaultdict(lambda: defaultdict(int))
         self.area_dict= defaultdict(lambda :defaultdict(int))
 
@@ -72,23 +72,25 @@ class CaculateDateAndSave(object):
                 yield row
 
     def get_haplogroup_amount(self):
+        SCHEAM = ['O', 'C', 'N', 'Q', 'R', 'D', 'H', 'E', 'G', 'J']
         for row in self.load_data():
             # lon = ('lon', row[-1])
             # lat = ('lat', row[-2])
             lon = row[-1]
             lat = row[-2]
-            loca = row[3]
+            loca = row[2]
             province = row[2]
-            ethnic = row[0]
+            ethnic = row[1]
 
             haplogroup_classfy = str(row[4] or row[6])
             if not haplogroup_classfy:
                 continue
+            if haplogroup_classfy[0] in SCHEAM:
+                self.ethnic_dict[ethnic][loca][haplogroup_classfy[0]] += 1
             d_haplogroup_classfy = [haplogroup_classfy[0:i + 1] for i in range(len(haplogroup_classfy))]
             for haplo in d_haplogroup_classfy:
                 self.lat_haplogroup_dict[haplo][lat] += 1
                 self.lon_haplogroup_dict[haplo][lon] += 1
-                self.ethnic_dict[ethnic][haplo] += 1
 
                 province_list = self.province_dict.keys()
                 province_key_list = map(lambda x: x[0], province_list)
@@ -99,6 +101,25 @@ class CaculateDateAndSave(object):
                 if province == '\xe2\x80\x8b\xe2\x80\x8b\xe6\xb1\x9f\xe8\x8b\x8f':
                     key = province_list[province_key_list.index('\xe6\xb1\x9f\xe8\x8b\x8f')]
                 self.province_dict[key][haplo] += 1
+
+    def output_ethnic(self,output_file):
+        SCHEAM = ['O', 'C', 'N', 'Q', 'R', 'D', 'H', 'E', 'G', 'J']
+        self.get_haplogroup_amount()
+        for ethnic, loca_dict in self.ethnic_dict.items():
+            for loca, haplo_dict in loca_dict.items():
+                tsum = sum([float(x[1]) for x in haplo_dict.items()])
+                for haplo, cnt in haplo_dict.items():
+                    print ethnic, loca, haplo, tsum, cnt
+                    self.ethnic_dict[ethnic][loca][haplo] = float(cnt) / tsum
+
+        with open(output_file, 'wb') as f:
+            w = csv.writer(f)
+            w.writerow(['地区','民族'] + SCHEAM)
+            for ethnic, loca_dict in self.ethnic_dict.items():
+                for loca, haplo_dict in loca_dict.items():
+                    print ethnic, loca
+                    w.writerow([loca,ethnic] + [haplo_dict[x]*1000 for x in SCHEAM])
+
 
     def static_area(self, output_file):
         self.get_haplogroup_amount()
@@ -767,4 +788,4 @@ class Arlequin(object):
 if __name__ == "__main__":
     # GetGip().get_and_save()
     # SpiltData('data1.csv').inter()
-    Arlequin('Mandarin.csv','arl_Mandarin.txt').output_province()
+    CaculateDateAndSave('data1.csv','data2.csv').output_ethnic('ethnic_pca.csv')
